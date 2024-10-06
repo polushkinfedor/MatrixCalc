@@ -1,0 +1,8 @@
+//
+// Created by koala on 06.10.2024.
+//
+
+#ifndef MATRIXCALC_MATRIX_MATH_H
+#define MATRIXCALC_MATRIX_MATH_H
+
+#endif //MATRIXCALC_MATRIX_MATH_H
