@@ -3,7 +3,8 @@
 // --------------------------------------------------------------------------------------------------------------------
 // Служебная функция расчета определителя
 // --------------------------------------------------------------------------------------------------------------------
-void matrix::calc_det() {
+template<typename val_type>
+void matrix<val_type>::calc_det() {
     ;
 }
 
@@ -11,19 +12,21 @@ void matrix::calc_det() {
 // --------------------------------------------------------------------------------------------------------------------
 // БЛОК КОНСТРУТОРОВ
 // --------------------------------------------------------------------------------------------------------------------
-matrix::matrix() {
+template<typename val_type>
+matrix<val_type>::matrix() {}
+
+template<typename val_type>
+matrix<val_type>::matrix(int n) {
     ;
 }
 
-matrix::matrix(int n) {
+template<typename val_type>
+matrix<val_type>::matrix(int n, int m, matrix_type type) {
     ;
 }
 
-matrix::matrix(int n, int m, int type) {
-    ;
-}
-
-matrix::matrix(const int &matrix_value) {
+template<typename val_type>
+matrix<val_type>::matrix(const matrix_body<val_type> &matrix_value) {
     ;
 }
 
@@ -31,19 +34,23 @@ matrix::matrix(const int &matrix_value) {
 // --------------------------------------------------------------------------------------------------------------------
 // GET функции
 // --------------------------------------------------------------------------------------------------------------------
-type_info matrix::matrix_data_type() {
+template<typename val_type>
+type_info matrix<val_type>::matrix_data_type() {
     ;
 }
 
-double matrix::det() {
+template<typename val_type>
+double matrix<val_type>::det() {
     ;
 }
 
-int matrix::line_size() {
+template<typename val_type>
+int matrix<val_type>::line_size() {
     ;
 }
 
-int matrix::column_size() {
+template<typename val_type>
+int matrix<val_type>::column_size() {
     ;
 }
 
@@ -53,51 +60,60 @@ int matrix::column_size() {
 // --------------------------------------------------------------------------------------------------------------------
 // ------------------------------------------------------
 // copy
-matrix matrix::operator = (const matrix& sec_matrix) {
+template<typename val_type>
+matrix<val_type>& matrix<val_type>::operator = (const matrix<val_type>& sec_matrix) {
     ;
 }
 // ------------------------------------------------------
 
 // ------------------------------------------------------
 // multiply
-matrix matrix::operator * (const val_type number) {
+template<typename val_type>
+matrix<val_type>& matrix<val_type>::operator * (const val_type number) {
     ;
 }
 
-matrix matrix::operator * (const matrix& sec_matrix) {
+template<typename val_type>
+matrix<val_type>& matrix<val_type>::operator * (const matrix<val_type>& sec_matrix) {
     ;
 }
 // ------------------------------------------------------
 
 // ------------------------------------------------------
 // division
-matrix matrix::operator / (const val_type number) {
+template<typename val_type>
+matrix<val_type>& matrix<val_type>::operator / (const val_type number) {
     ;
 }
 
-matrix matrix::operator / (const matrix& sec_matrix) {
+template<typename val_type>
+matrix<val_type>& matrix<val_type>::operator / (const matrix<val_type>& sec_matrix) {
     ;
 }
 // ------------------------------------------------------
 
 // ------------------------------------------------------
 // plus
-matrix matrix::operator + (const val_type number) {
+template<typename val_type>
+matrix<val_type>& matrix<val_type>::operator + (const val_type number) {
     ;
 }
 
-matrix matrix::operator + (const matrix& sec_matrix) {
+template<typename val_type>
+matrix<val_type>& matrix<val_type>::operator + (const matrix<val_type>& sec_matrix) {
     ;
 }
 // ------------------------------------------------------
 
 // ------------------------------------------------------
 // subtraction
-matrix matrix::operator - (const val_type number) {
+template<typename val_type>
+matrix<val_type>& matrix<val_type>::operator - (const val_type number) {
     ;
 }
 
-matrix matrix::operator - (const matrix& sec_matrix) {
+template<typename val_type>
+matrix<val_type>& matrix<val_type>::operator - (const matrix& sec_matrix) {
     ;
 }
 // ------------------------------------------------------
@@ -106,7 +122,8 @@ matrix matrix::operator - (const matrix& sec_matrix) {
 // --------------------------------------------------------------------------------------------------------------------
 // БЛОК ФУНКЦИЙ ОПЕРАЦИЙ С МАТРИЦАМИ
 // --------------------------------------------------------------------------------------------------------------------
-matrix matix::calc_inverse_matrix() {
+template<typename val_type>
+matrix<val_type>& matrix<val_type>::calc_inverse_matrix() {
     ;
 }
 
@@ -114,21 +131,24 @@ matrix matix::calc_inverse_matrix() {
 // --------------------------------------------------------------------------------------------------------------------
 // БЛОК ФУНКЦИЙ ПРОВЕРОК ДОПУСТИМОСТИ МАТ.ДЕЙСТВИЙ
 // --------------------------------------------------------------------------------------------------------------------
-// ---------------------------------------------------------------------
+template<typename val_type>
 bool is_zero_determenant() {
     // Проверка для определения допустимости взятия обратной матрицы
     ;
 }
 
-bool can_ariphmetic_op_matrix(const matrix& sec_matrix) {
+template<typename val_type>
+bool can_ariphmetic_op_matrix(const matrix<val_type>& sec_matrix) {
     // Проверка для определения допустимости арифметических операций (-, +)
     ;
 }
 
+template<typename val_type>
 bool can_algebra_op_matrix(const val_type sec_matrix) {
     // Проверка для определения допустимости алгебраических операций (*, /)
 }
 
-bool can_algebra_op_matrix(const matrix& sec_matrix) {
+template<typename val_type>
+bool can_algebra_op_matrix(const matrix<val_type>& sec_matrix) {
     // Проверка для определения допустимости алгебраических операций (*, /)
 }
