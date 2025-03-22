@@ -22,6 +22,6 @@ MatrixCalc.py выполнить комманду "pyinstaller --noconsole --one
 ## Используемые py-библиотеки: 
 - tkinter, datetime, os и ctypes
 ## использованные заголовочные С++ файлы: 
--Windows.h, vector, typeinfo и math.h
+- Windows.h, vector, typeinfo и math.h
 
 # author:  Полушкин Ф.Ю.
